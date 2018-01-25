@@ -7,9 +7,10 @@ import java.util.Date;
 import java.util.List;
 
 public class WidgetUtils {
-    static List<Widget> widgets = new ArrayList<Widget>();
+    
     public static List<Widget> getSampleWidgets() {
     
+	List<Widget> widgets = new ArrayList<Widget>();
         widgets.add(new Widget(1, "Red", stringToDateConverter("01-01-2006")));
         widgets.add(new Widget(2, "Blue",  stringToDateConverter("02-03-2007")));
         widgets.add(new Widget(3, "Red",  stringToDateConverter("03-09-2006")));
@@ -48,10 +49,5 @@ public class WidgetUtils {
             e.printStackTrace();
         }
         return parsedDate;
-    }
-
-    //remove Widgets that are added to the shipment list
-    public static void deStockWidgets(List<Widget> shippedWidgets){
-    	widgets.removeAll(shippedWidgets);
     }
 }

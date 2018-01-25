@@ -21,7 +21,12 @@ public class Shipment {
 	public void setShipmentOption(String shipmentOption) {
 		this.shipmentOption = shipmentOption;
 	}
-
+	
+	/*Method to creates hipment with th conditions that 
+	1. there should be widgets selected
+	2. no. of widgets should be <10
+	3. he should select atleast one shipment method - Express/Normal
+	if not throw him exception.*/ 
 	public String createShippment() {
 
 		if (this.widgets == null) {
